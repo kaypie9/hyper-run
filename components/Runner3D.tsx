@@ -274,12 +274,19 @@ const submitOnceRef = useRef(false);
 useEffect(() => {
   (async () => {
     try {
+      // tell Farcaster we’re ready
       await sdk.actions.ready()
-    } catch {}
+
+      // only add if actually running inside miniapp
+      const inMini = await sdk.isInMiniApp?.()
+      if (inMini) {
+        await sdk.actions.addMiniApp()
+      }
+    } catch (err) {
+      console.error('miniapp setup error', err)
+    }
   })()
 }, [])
-
-
 
 
   // game state
@@ -326,7 +333,7 @@ const fireTx = useCallback(
       // 0.0001 ETH on Base
       const hash = await sendTransactionAsync({
         // send to your address
-        to: '0xf4F61BC26d2Fed02BEE82E88EFA4D9ac002c3185',
+        to: '0xA13a9d5Cdc6324dA1Ca6A18Bc9B548904033858C',
         value: parseEther('0.00001'), // bigint
         // if your wagmi config isn’t already on Base, force it:
         // chainId: 8453,
@@ -1979,7 +1986,7 @@ if (localScore >= nextBossAtScore) {
     fetch('/api/leaderboard/submit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ game: 'hyperrun', member, score: localScore }),
+      body: JSON.stringify({ game: 'Velocity', member, score: localScore }),
       cache: 'no-store',
     }).catch(e => console.warn('submit failed', e));
   }
@@ -2120,7 +2127,7 @@ const handleRetry = async () => {
 const handleShare = async () => {
   try {
     const url = 'https://farcaster.xyz/miniapps/VJBtrjo-cwfS/hyper-run'; // your game URL (root is fine)
-    const text = `I scored ${score} in Hyper Run! Can you beat me?`;
+    const text = `I scored ${score} in Velocity! Can you beat me?`;
 
     const result = await sdk.actions.composeCast({
       text,
@@ -2602,7 +2609,7 @@ const short = (a?: string) =>
       textTransform: 'uppercase',
     }}
   >
-    HYPER RUN
+    Velocity
   </div>
 </div>
 

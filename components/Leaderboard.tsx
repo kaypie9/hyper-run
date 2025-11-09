@@ -28,7 +28,7 @@ export default function Leaderboard() {
     try {
       setErr(null);
       setLoading(true);
-      const res = await fetch(`/api/leaderboard?game=hyperrun&limit=10`, { cache: 'no-store' });
+      const res = await fetch(`/api/leaderboard?game=velocity&limit=10`, { cache: 'no-store' });
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error || 'failed');
       setRows(Array.isArray(data?.rows) ? data.rows : []);

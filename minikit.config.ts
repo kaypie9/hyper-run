@@ -7,23 +7,23 @@ export const minikitConfig = {
     signature: process.env.NEXT_PUBLIC_FARCASTER_SIGNATURE || ''
   },
   miniapp: {
-    version: '1',
-    name: 'Flappy Mini',
-    subtitle: 'tap to fly',
-    description: 'flappy style mini app',
-    screenshotUrls: [`${ROOT}/screenshot-portrait.png`],
-    iconUrl: `${ROOT}/icon.png`,
-    splashImageUrl: `${ROOT}/splash.png`,
-    splashBackgroundColor: '#000000',
-    homeUrl: ROOT,                // game home (your /)
-    webhookUrl: `${ROOT}/api/webhook`, // keep for later or remove if unused
-    primaryCategory: 'games',
-    tags: ['game', 'arcade'],
-    heroImageUrl: `${ROOT}/splash.png`,
-    tagline: 'dodge the pipes',
-    ogTitle: 'Flappy Mini',
-    ogDescription: 'tap to play',
-    ogImageUrl: `${ROOT}/splash.png`
+      version: '1',
+      name: 'Velocity',
+      subtitle: 'run',
+      description: 'Velocity mini app',
+      screenshotUrls: [`${ROOT}/screenshot-portrait.png`],
+      iconUrl: `${ROOT}/images/icon.png`,
+      splashImageUrl: `${ROOT}/images/splash.png`,
+      splashBackgroundColor: '#000000',
+      homeUrl: ROOT,
+      webhookUrl: `${ROOT}/api/webhook`,
+      primaryCategory: 'games',
+      tags: ['game', 'arcade'],
+      heroImageUrl: `${ROOT}/images/splash.png`,
+      tagline: 'dodge the obstacles',
+      ogTitle: 'Velocity',
+      ogDescription: 'tap to play',
+      ogImageUrl: `${ROOT}/images/splash.png`,
   }
 } as const;
 

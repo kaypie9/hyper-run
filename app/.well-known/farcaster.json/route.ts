@@ -3,15 +3,15 @@ import { NextResponse } from 'next/server';
 // make sure this route always runs on the server at request time
 export const dynamic = 'force-dynamic';
 
-const ROOT = process.env.NEXT_PUBLIC_URL || 'https://hyperrun-theta.vercel.app';
+const ROOT = process.env.NEXT_PUBLIC_URL || 'https://velocity-zeta-wine.vercel.app';
 
 // your known-good association values (fallbacks)
 const FALLBACK = {
   header:
-    '',
-  payload: '',
+    'eyJmaWQiOjE0MTYwOTEsInR5cGUiOiJjdXN0b2R5Iiwia2V5IjoiMHhCRGRmYjZhMTBENDdiOUU2OTk0NEE5Mzc3RjQyZDY1NzZBRDQ5YUE1In0',
+  payload: 'eyJkb21haW4iOiJ2ZWxvY2l0eS16ZXRhLXdpbmUudmVyY2VsLmFwcCJ9',
   signature:
-    '',
+    'We8Iw18KjbQIqDHPT6o93UscO9S3vM0IhBo3bm9Zye52GV2UN2Lh0IZKfZjoA6USsROWnv4bgy0DOToUeXSkhxs=',
 };
 
 export async function GET() {
@@ -23,7 +23,7 @@ export async function GET() {
       // --- Base Builder block (owner required; allowed optional) ---
   const ownerAddress =
     process.env.NEXT_PUBLIC_BASE_BUILDER_OWNER ||
-    '0xaddress'; // <- your owner
+    '0xD1953dc7195a205B562e3DDdF45293Fa646Bab01'; // <- your owner
   // Optional: comma-separated list of additional builder addresses
   const allowedCsv = (process.env.NEXT_PUBLIC_BASE_BUILDER_ALLOWED || '').trim();
   const allowedAddresses = allowedCsv

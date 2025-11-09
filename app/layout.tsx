@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import Providers from '@/components/providers';
 
 export const metadata: Metadata = {
-  title: 'Hyper Run',
+  title: 'Velocity',
   description: 'Neon runner',
 };
 
