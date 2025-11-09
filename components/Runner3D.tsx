@@ -2126,7 +2126,7 @@ const handleRetry = async () => {
 
 const handleShare = async () => {
   try {
-    const url = 'https://farcaster.xyz/miniapps/VJBtrjo-cwfS/hyper-run'; // your game URL (root is fine)
+    const url = 'https://farcaster.xyz/miniapps/EgJRvR0Vd6bs/velocity'; // your game URL (root is fine)
     const text = `I scored ${score} in Velocity! Can you beat me?`;
 
     const result = await sdk.actions.composeCast({
@@ -2596,7 +2596,7 @@ const short = (a?: string) =>
 }}>
   <div
     style={{
-      fontSize: 64,
+      fontSize: 50,
       fontWeight: 900,
       letterSpacing: 2,
       color: '#ff66ff',

@@ -1,9 +1,9 @@
 // app/page.tsx
 export const metadata = {
-  title: 'Hyper Run',
+  title: 'Velocity',
   description: 'Dodge • Jump • Slide — chain combos for speed',
   openGraph: {
-    title: 'Hyper Run',
+    title: 'Velocity',
     description: 'Dodge • Jump • Slide — chain combos for speed',
     images: ['https://velocity-zeta-wine.vercel.app/images/icon.png'], // absolute URL
   },

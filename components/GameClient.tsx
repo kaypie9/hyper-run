@@ -16,7 +16,7 @@ type RunnerAPI = {
 };
 
 function getPlayerId() {
-  const k = 'hyperrun:player'
+  const k = 'velocity:player'
   let id = localStorage.getItem(k)
   if (!id) {
     id = 'player_' + Math.random().toString(36).slice(2, 8)
