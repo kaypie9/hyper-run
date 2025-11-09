@@ -1986,7 +1986,7 @@ if (localScore >= nextBossAtScore) {
     fetch('/api/leaderboard/submit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ game: 'Velocity', member, score: localScore }),
+      body: JSON.stringify({ game: 'velocity', member, score: localScore }),
       cache: 'no-store',
     }).catch(e => console.warn('submit failed', e));
   }

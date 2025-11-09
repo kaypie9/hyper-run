@@ -30,7 +30,7 @@ async function submitScoreToLB(score: number) {
     await fetch('/api/leaderboard', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ game: 'Velocity', member: getPlayerId(), score })
+      body: JSON.stringify({ game: 'velocity', member: getPlayerId(), score })
     })
   } catch (err) {
     console.error('leaderboard submit failed', err)
