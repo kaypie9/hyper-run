@@ -4,7 +4,6 @@ import React, { useEffect, useRef, useState, useCallback } from 'react';
 import dynamic from 'next/dynamic';
 import { Overlay } from './ui/Overlay';
 import ConnectWallet from './ConnectWallet';
-import AddMiniAppPrompt from './AddMiniAppPrompt';
 
 const Runner3D = dynamic(() => import('./Runner3D'), { ssr: false });
 
@@ -208,7 +207,6 @@ return (
         setIsDead(false);
       }}
     />
-    <AddMiniAppPrompt />
     </div>
 );
 }
