@@ -3,7 +3,7 @@ const keyOf = (game: string) => `lb:${game}`
 
 export async function POST(req: Request) {
   try {
-    const { game = 'hyperrun', member, score } = await req.json() as {
+    const { game = 'Velocity', member, score } = await req.json() as {
       game?: string; member: string; score: number
     }
 
